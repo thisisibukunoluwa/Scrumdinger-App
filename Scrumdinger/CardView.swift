@@ -20,8 +20,8 @@ struct CardView: View {
                 Label("\(scrum.attendees.count)",systemImage: "person.3")
                     .accessibilityLabel("\(scrum.attendees.count) attendees")
                 Spacer()
-                Label("\(scrum.lengthinMinutes)", systemImage: "clock")
-                    .accessibilityLabel("\(scrum.lengthinMinutes) minutes meetings")
+                Label("\(scrum.lengthInMinutes)", systemImage: "clock")
+                    .accessibilityLabel("\(scrum.lengthInMinutes) minutes meetings")
                     .labelStyle(.trailingIcon)
     }
             .font(.caption)
