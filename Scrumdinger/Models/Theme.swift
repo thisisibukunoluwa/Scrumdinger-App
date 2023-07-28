@@ -24,14 +24,18 @@ case sky
 case tan
 case teal
 case yellow
-    
     var accentColor:Color {
         switch self {
         case .bubblegum , .buttercup, .lavender, .orange,.periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
         case .indigo , .magenta, .navy, .oxblood,.purple: return .white
         }
     }
+    // creates a color using the enumerations rawValue 
     var mainColor: Color {
-        Color(rawValue)
+        Color(rawValue) 
+    }
+    // capitalizes the enumeration rawValue
+    var name : String {
+        rawValue.capitalized
     }
 }
