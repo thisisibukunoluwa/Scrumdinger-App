@@ -28,13 +28,14 @@ Select the Swift file you created and click "Add."
 
 The Swift file will now be added to your Xcode project, and you should see it in the Project Navigator. You can now work on the Swift file within Xcode and include it in your project as needed.
 
-## How you create a SwiftUI app 
+## How you create a SwiftUI app
 
 You create a SwiftUI app by declaring a structure that conforms to the App protocol. The app’s body property returns a Scene that contains a view hierarchy representing the primary user interface for the app.
-
 
 ## Note
 
 When an Item conforms to Identifiable, the id argument isn’t necessary.
 
+## ForEach 
 
+ForEach is a ViewBuilder that computes views on demand from an underlying collection of data.
