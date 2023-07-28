@@ -3,10 +3,22 @@ import SwiftUI
 struct ScrumsView : View {
     let scrums: [DailyScrum]
     var body : some View {
-        List(scrums, id: \.title) {
-    // Th closure returns a cardView for each element in the scrums array
-            scrum in CardView(scrum:scrum)
-                .listRowBackground((scrum.theme.mainColor))
+        NavigationStack{
+            List(scrums, id: \.title) {
+        // The closure returns a cardView for each element in the scrums array
+                scrum in
+                NavigationLink(destination:DetailView(scrum: scrum)) {
+                    CardView(scrum:scrum)
+                        .listRowBackground((scrum.theme.mainColor))
+                }
+            }
+            .navigationTitle("Daily Scrums")
+            .toolbar {
+                Button(action:{}) {
+                    Image(systemName:"plus")
+                }
+                .accessibilityLabel("New Scrum")
+            }
         }
     }
 }
