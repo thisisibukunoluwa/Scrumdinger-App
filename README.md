@@ -39,3 +39,25 @@ When an Item conforms to Identifiable, the id argument isn’t necessary.
 ## ForEach 
 
 ForEach is a ViewBuilder that computes views on demand from an underlying collection of data.
+
+## Managing data flow between views 
+
+We use @State and binding to ensure that our user interface reflects the current state of our dpps 
+data 
+To avoid data inconsistency we need a single source of truth for each data element in the app 
+
+State
+When you declare a property as a @State, you create a source of truth within your view. The system identifies all elements of a view that depend on the value of a @State property.
+
+User interactions might change your @State property. The system renders a new version of the user interface by updating any views that depend on that property.
+When a @State property value changes, the system automatically redraws the view using the updated values of the property.
+Delare state properties as provate so you can only access them in the view you define them 
+Binding 
+A property that you wrap with @Binding shares read and write access with an existing source of truth, like a @State property. A @Binding doesn’t store the data directly. Instead, it creates a two-way connection between an existing source of truth and a view that displays and updates that data. This connection ensures that multiple views associated with a piece of data are in sync.
+
+## getters and setters 
+You can provide an argument to the setter to name the newly set value. If you omit the argument, the setter uses newValue as the default name.
+
+
+## modal views 
+Modal views remove users from the main navigation flow of the app. Use modality for short, self-contained tasks.
