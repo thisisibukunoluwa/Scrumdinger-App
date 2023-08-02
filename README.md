@@ -60,4 +60,21 @@ You can provide an argument to the setter to name the newly set value. If you om
 
 
 ## modal views 
+
 Modal views remove users from the main navigation flow of the app. Use modality for short, self-contained tasks.
+
+
+## Binding and single source of truth 
+
+Try to maintain a single source of truth for every piece of data in your app. Instead of creating a new source of truth for the theme picker, you’ll use a binding that references a theme structure defined in the parent view.
+
+You can use the constant(_:) type method to create a binding to a hard-coded, immutable value. Constant bindings are useful in previews or when prototyping your app’s user interface.
+
+@State to create a source of truth for a value type, and you use @Binding to share write access to a state with other views. 
+
+
+## constant binding
+
+Use a constant binding to create a binding to an immutable value.
+
+You can use bindings to pass data to different views that need to mutate it
